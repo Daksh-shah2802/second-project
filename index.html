@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SecureBank - Smart Banking</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <div class="logo-icon">SB</div>
+
+            <div>
+                <h2>SecureBank</h2>
+                <p>Smart Banking</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#tools">Tools</a>
+            <a href="#eligibility">Eligibility</a>
+            <a href="#interest">Interest</a>
+
+            <button id="themeBtn" class="theme-btn">
+                🌙
+            </button>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="tag">
+                SECURE • SIMPLE • SMART
+            </span>
+
+            <h1>
+                Banking made
+                <span>simple.</span>
+            </h1>
+
+            <p>
+                Calculate your EMI, check loan eligibility,
+                calculate interest and manage your banking
+                utilities using JavaScript.
+            </p>
+
+            <a href="#tools" class="main-btn">
+                Explore Banking Tools →
+            </a>
+
+        </div>
+
+
+        <!-- Bank Card -->
+
+        <div class="bank-card">
+
+            <div class="card-header">
+                <span>SECUREBANK</span>
+                <span>•••</span>
+            </div>
+
+            <div class="chip">
+                ▦
+            </div>
+
+            <h2>
+                SMART BANKING
+            </h2>
+
+            <p>
+                Your financial assistant
+            </p>
+
+            <div class="card-footer">
+                <span>SECURE ACCOUNT</span>
+                <span>2026</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATISTICS ================= -->
+
+    <section class="statistics">
+
+        <div class="stat">
+            <h2>03+</h2>
+            <p>Banking Tools</p>
+        </div>
+
+        <div class="stat">
+            <h2>100%</h2>
+            <p>Client Side</p>
+        </div>
+
+        <div class="stat">
+            <h2>ES6</h2>
+            <p>JavaScript</p>
+        </div>
+
+        <div class="stat">
+            <h2>24/7</h2>
+            <p>Available</p>
+        </div>
+
+    </section>
+
+
+    <!-- ================= BANKING TOOLS ================= -->
+
+    <section class="tools-section" id="tools">
+
+        <div class="section-title">
+
+            <span>FINANCIAL TOOLS</span>
+
+            <h2>
+                Everything you need
+            </h2>
+
+            <p>
+                Use our JavaScript-powered banking
+                utilities to perform calculations.
+            </p>
+
+        </div>
+
+
+        <div class="tools-container">
+
+
+            <!-- ================= LOAN ELIGIBILITY ================= -->
+
+            <div class="tool-card" id="eligibility">
+
+                <div class="tool-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Loan Eligibility
+                </h3>
+
+                <p class="tool-description">
+                    Check your eligibility based on
+                    income and credit score.
+                </p>
+
+
+                <form id="eligibilityForm">
+
+                    <label>
+                        Monthly Income
+                    </label>
+
+                    <div class="input-box">
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="income"
+                            placeholder="50000"
+                            required
+                        >
+                    </div>
+
+
+                    <label>
+                        Credit Score
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>★</span>
+
+                        <input
+                            type="number"
+                            id="creditScore"
+                            placeholder="750"
+                            min="300"
+                            max="900"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="calculate-btn"
+                    >
+                        Check Eligibility
+                    </button>
+
+                </form>
+
+
+                <div
+                    id="eligibilityResult"
+                    class="result"
+                ></div>
+
+            </div>
+
+
+
+            <!-- ================= EMI CALCULATOR ================= -->
+
+            <div class="tool-card">
+
+                <div class="tool-icon">
+                    ₹
+                </div>
+
+                <h3>
+                    EMI Calculator
+                </h3>
+
+                <p class="tool-description">
+                    Calculate your monthly loan
+                    repayment amount.
+                </p>
+
+
+                <form id="emiForm">
+
+                    <label>
+                        Loan Amount
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="loanAmount"
+                            placeholder="500000"
+                            required
+                        >
+
+                    </div>
+
+
+                    <label>
+                        Annual Interest Rate
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>%</span>
+
+                        <input
+                            type="number"
+                            id="loanRate"
+                            placeholder="10.5"
+                            step="0.01"
+                            required
+                        >
+
+                    </div>
+
+
+                    <label>
+                        Loan Tenure
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>Y</span>
+
+                        <input
+                            type="number"
+                            id="loanYears"
+                            placeholder="5"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="calculate-btn"
+                    >
+                        Calculate EMI
+                    </button>
+
+                </form>
+
+
+                <div
+                    id="emiResult"
+                    class="result"
+                ></div>
+
+            </div>
+
+
+
+            <!-- ================= INTEREST CALCULATOR ================= -->
+
+            <div
+                class="tool-card"
+                id="interest"
+            >
+
+                <div class="tool-icon">
+                    %
+                </div>
+
+                <h3>
+                    Interest Calculator
+                </h3>
+
+                <p class="tool-description">
+                    Compare simple and compound
+                    interest.
+                </p>
+
+
+                <form id="interestForm">
+
+                    <label>
+                        Principal Amount
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>₹</span>
+
+                        <input
+                            type="number"
+                            id="principal"
+                            placeholder="100000"
+                            required
+                        >
+
+                    </div>
+
+
+                    <label>
+                        Interest Rate
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>%</span>
+
+                        <input
+                            type="number"
+                            id="interestRate"
+                            placeholder="8"
+                            step="0.01"
+                            required
+                        >
+
+                    </div>
+
+
+                    <label>
+                        Time
+                    </label>
+
+                    <div class="input-box">
+
+                        <span>Y</span>
+
+                        <input
+                            type="number"
+                            id="interestYears"
+                            placeholder="3"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="calculate-btn"
+                    >
+                        Calculate Interest
+                    </button>
+
+                </form>
+
+
+                <div
+                    id="interestResult"
+                    class="result"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ACCOUNT SUMMARY ================= -->
+
+    <section class="summary-section">
+
+        <div class="summary-wrapper">
+
+            <div class="summary-info">
+
+                <span class="tag">
+                    ACCOUNT UTILITIES
+                </span>
+
+                <h2>
+                    Generate Account Summary
+                </h2>
+
+                <p>
+                    This section demonstrates
+                    JavaScript loops, functions,
+                    arrays and DOM manipulation.
+                </p>
+
+                <button
+                    id="summaryBtn"
+                    class="main-btn"
+                >
+                    Generate Summary
+                </button>
+
+            </div>
+
+
+            <div
+                id="summaryResult"
+                class="summary-card"
+            >
+
+                <h3>
+                    Account Summary
+                </h3>
+
+                <p>
+                    Click the button to generate
+                    your account summary.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= JAVASCRIPT CONCEPTS ================= -->
+
+    <section class="concept-section">
+
+        <div class="section-title">
+
+            <span>PRACTICAL 3</span>
+
+            <h2>
+                JavaScript Concepts
+            </h2>
+
+            <p>
+                Concepts demonstrated in this
+                practical.
+            </p>
+
+        </div>
+
+
+        <div class="concept-grid">
+
+
+            <div class="concept-card">
+
+                <strong>01</strong>
+
+                <h3>
+                    Variables
+                </h3>
+
+                <p>
+                    var, let and const
+                </p>
+
+            </div>
+
+
+            <div class="concept-card">
+
+                <strong>02</strong>
+
+                <h3>
+                    Operators
+                </h3>
+
+                <p>
+                    Arithmetic, relational,
+                    logical and assignment
+                </p>
+
+            </div>
+
+
+            <div class="concept-card">
+
+                <strong>03</strong>
+
+                <h3>
+                    Conditions
+                </h3>
+
+                <p>
+                    if, if-else and switch
+                </p>
+
+            </div>
+
+
+            <div class="concept-card">
+
+                <strong>04</strong>
+
+                <h3>
+                    Loops
+                </h3>
+
+                <p>
+                    for, while and do-while
+                </p>
+
+            </div>
+
+
+            <div class="concept-card">
+
+                <strong>05</strong>
+
+                <h3>
+                    Functions
+                </h3>
+
+                <p>
+                    Parameters and return values
+                </p>
+
+            </div>
+
+
+            <div class="concept-card">
+
+                <strong>06</strong>
+
+                <h3>
+                    DOM
+                </h3>
+
+                <p>
+                    Dynamic webpage interaction
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+
+            <h2>
+                SecureBank
+            </h2>
+
+            <p>
+                Smart banking utilities powered
+                by JavaScript.
+            </p>
+
+        </div>
+
+        <p>
+            Practical 3 • Web Technology Framework
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
